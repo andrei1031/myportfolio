@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reuben Andrei Saldivar | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body class="light-mode">
+
+    <nav class="navbar">
+        <div class="logo">RASS</div>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Comment</a></li>
+            <li><button id="theme-toggle">🌙</button></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <img src="images/image1.png" alt="Reuben Andrei Saldivar" class="profile-pic">
+            <h1>Reuben Andrei Saldivar</h1>
+            <h2>Programmer & Aircraft Technician</h2>
+            <p>"Win through your actions, never through argument."</p>
+            <div class="hero-buttons">
+                <a href="files/Saldivar, Reuben Andrei(Resume).pdf" class="btn" download>Download Resume</a>
+                <a href="#socials" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Hi! I'm <strong>Reuben Andrei</strong> (or "Drei"). I am a dedicated student at the University of the Cordilleras majoring in Web Technology, with a unique background in Aircraft Maintenance Technology.
+                    </p>
+                    <p>
+                        My goal is to merge my technical discipline from aviation with my creative passion for programming to build efficient, user-friendly applications. I aspire to become an Airline Pilot or a Senior Developer.
+                    </p>
+                    <ul class="info-list">
+                        <li><strong>Age:</strong> 23</li>
+                        <li><strong>Location:</strong> Baguio City, Philippines</li>
+                        <li><strong>Email:</strong> andreisantossaldivar@gmail.com</li>
+                        <li><strong>Interests:</strong> Music, Video Games, F1 Grand Prix, Marvel</li>
+                    </ul>
+                </div>
+                <div class="about-img">
+                    <img src="images/IT.png" alt="Reuben Casual">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>University of the Cordilleras</h3>
+                    <p class="role">BS in Information Technology (Web Technology)</p>
+                    <p class="date">2023 - 2026 (Expected)</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>ACATECH Aviation College</h3>
+                    <p class="role">Aircraft Maintenance Technology</p>
+                    <p class="date">2020 - 2023</p>
+                    <p>Completed 1200 hours of On-the-Job Training.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>University of the Cordilleras (SHS)</h3>
+                    <p class="role">ICT Major in Animation</p>
+                    <p class="date">2018 - 2020</p>
+                    <p>Honors Student, Medalist.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="images/cert.jpg" alt="OJT" class="card-img-top">
+                    <div class="card-body">
+                        <h3>OJT Aircraft Mechanic</h3>
+                        <h4>Aviation Integrity</h4>
+                        <p class="date">Jan 2023 - July 2023</p>
+                        <p>Performed maintenance tasks, safety wiring, and secured aircraft fasteners. Gained hands-on experience with sheet metal and tool handling.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/medal.jpg" alt="Graduation" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Research Lead & Developer</h3>
+                        <h4>Senior High School Project</h4>
+                        <p>Lead researcher for "MEEKRAI", an Android-based attendance monitoring system using Java and SQL.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span>Java</span>
+                        <span>Javascript</span>
+                        <span>C#</span>
+                        <span>SQL</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Python</span>
+                        <span>MIT App Inventor</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical</h3>
+                    <div class="skill-tags">
+                        <span>Maintain Airworthiness</span>
+                        <span>Tool Handling</span>
+                        <span>Safety Wiring</span>
+                        <span>Sheet Metal Work</span>
+                        <span>Inspection Procedures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/Calculator.jpg" alt="Java Calculator">
+                    <div class="overlay">
+                        <h3>Java UI Calculator</h3>
+                        <p>A functional calculator built with Java Swing.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/FirstEverApp.jpg" alt="MIT App">
+                    <div class="overlay">
+                        <h3>First Android App</h3>
+                        <p>Created using MIT App Inventor.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Blocks.png" alt="Block Coding">
+                    <div class="overlay">
+                        <h3>Block Logic</h3>
+                        <p>Logic structure for the Android Application.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="files/Traditional Animation (Lose one's heart).mp4" target="_blank">
+                        <img src="images/Pic.png" alt="Animation">
+                    </a>
+                    <div class="overlay">
+                        <h3>Traditional Animation</h3>
+                        <p>Short film: "Lose One's Heart".</p>
+                    </div>
+                </div>
+            </div>
+            <div class="center-text" style="margin-top: 20px;">
+                <a href="files/Final-Paper-For-Pr2.pdf" class="btn btn-outline" download>Download MEEKRAI Research Paper</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Comment</h2>
+            
+            <div class="contact-layout">
+                <div class="contact-form-wrapper">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="map-wrapper">
+                    <div id="map" style="height: 300px; width: 100%;"></div>
+                    <div class="social-links">
+                        <a href="https://github.com/andrei1031" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/reuben-andrei-santos-40a6141a1/" target="_blank">LinkedIn</a>
+                        <a href="mailto:andreisantossaldivar@gmail.com">Email</a>
+                    </div>
+                    <h2 id="socials" class="section-title">Socials</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Reuben Andrei Saldivar. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
