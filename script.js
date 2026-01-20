@@ -93,22 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // This requires a container with id="experience-timeline" in your HTML
     const experiences = [
         {
-            role: 'Senior Web Developer',
-            company: 'Tech Solutions Inc.',
-            period: '2022 - Present',
-            description: 'Leading frontend development teams, architecting scalable web applications, and mentoring junior developers.'
+            role: 'OJT Aircraft Mechanic',
+            company: 'Aviation Integrity',
+            period: 'Jan 2023 - July 2023',
+            description: 'Performed maintenance tasks, safety wiring, and secured aircraft fasteners. Gained hands-on experience with sheet metal and tool handling.'
         },
         {
-            role: 'Web Developer',
-            company: 'Creative Agency',
-            period: '2020 - 2022',
-            description: 'Developed responsive websites for diverse clients, optimized site performance, and collaborated with designers.'
-        },
-        {
-            role: 'Junior Developer',
-            company: 'StartUp Hub',
+            role: 'Research Lead & Developer',
+            company: 'Senior High School Project',
             period: '2019 - 2020',
-            description: 'Assisted in backend API development and maintained legacy codebases.'
+            description: 'Lead researcher for "MEEKRAI", an Android-based attendance monitoring system using Java and SQL.'
         }
     ];
 
@@ -180,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
                 ctx.fillStyle = particleColor;
-                ctx.globalAlpha = 0.15; // Subtle transparency
+                ctx.globalAlpha = 0.08; // Very subtle transparency for clean look
                 ctx.fill();
             }
         }
@@ -200,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Update color dynamically based on CSS variable (for dark mode support)
             const style = getComputedStyle(document.body);
-            particleColor = style.getPropertyValue('--primary-color').trim();
+            particleColor = style.getPropertyValue('--accent').trim();
 
             for (let i = 0; i < particlesArray.length; i++) {
                 particlesArray[i].update();
@@ -216,5 +210,34 @@ document.addEventListener('DOMContentLoaded', () => {
         setCanvasSize();
         init();
         animate();
+    }
+
+    /* --- Carousel Logic --- */
+    const track = document.querySelector('.carousel-track');
+    if (track) {
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.next-btn');
+        const prevButton = document.querySelector('.prev-btn');
+        let currentSlideIndex = 0;
+
+        const updateSlidePosition = () => {
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        };
+
+        const nextSlide = () => {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            updateSlidePosition();
+        };
+
+        const prevSlide = () => {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+        };
+
+        if (nextButton) nextButton.addEventListener('click', nextSlide);
+        if (prevButton) prevButton.addEventListener('click', prevSlide);
+        
+        // Auto-play
+        setInterval(nextSlide, 5000);
     }
 });
