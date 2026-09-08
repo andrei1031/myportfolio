@@ -93,16 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // This requires a container with id="experience-timeline" in your HTML
     const experiences = [
         {
+            role: 'Technology Intern',
+            company: 'Accenture Academy',
+            period: 'June 2026 - August 2026',
+            description: 'Built practical software development skills through guided training, collaborative exercises, and project work across cloud services and full-stack development.',
+            technologies: ['Google Cloud', 'React', 'Java', 'Spring Boot']
+        },
+        {
             role: 'OJT Aircraft Mechanic',
             company: 'Aviation Integrity',
             period: 'Jan 2023 - July 2023',
-            description: 'Performed maintenance tasks, safety wiring, and secured aircraft fasteners. Gained hands-on experience with sheet metal and tool handling.'
+            description: 'Completed aircraft maintenance tasks, including safety wiring, fastener security, sheet-metal work, and careful inspection procedures during 1,200 hours of OJT.',
+            technologies: ['Aircraft maintenance', 'Safety procedures', 'Inspection']
         },
         {
             role: 'Research Lead & Developer',
             company: 'Senior High School Project',
             period: '2019 - 2020',
-            description: 'Lead researcher for "MEEKRAI", an Android-based attendance monitoring system using Java and SQL.'
+            description: 'Led research and development for MEEKRAI, an Android attendance monitoring system designed around reliable records and straightforward classroom use.',
+            technologies: ['Java', 'SQL', 'Android']
         }
     ];
 
@@ -115,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>${exp.role} <span class="role">@ ${exp.company}</span></h3>
                 <p class="period" style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">${exp.period}</p>
                 <p>${exp.description}</p>
+                <div class="experience-stack">${exp.technologies.map(technology => `<span>${technology}</span>`).join('')}</div>
             `;
             timelineContainer.appendChild(item);
         });
@@ -212,32 +222,4 @@ document.addEventListener('DOMContentLoaded', () => {
         animate();
     }
 
-    /* --- Carousel Logic --- */
-    const track = document.querySelector('.carousel-track');
-    if (track) {
-        const slides = Array.from(track.children);
-        const nextButton = document.querySelector('.next-btn');
-        const prevButton = document.querySelector('.prev-btn');
-        let currentSlideIndex = 0;
-
-        const updateSlidePosition = () => {
-            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-        };
-
-        const nextSlide = () => {
-            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-            updateSlidePosition();
-        };
-
-        const prevSlide = () => {
-            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-            updateSlidePosition();
-        };
-
-        if (nextButton) nextButton.addEventListener('click', nextSlide);
-        if (prevButton) prevButton.addEventListener('click', prevSlide);
-        
-        // Auto-play
-        setInterval(nextSlide, 5000);
-    }
 });
