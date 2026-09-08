@@ -100,13 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies: ['Google Cloud', 'React', 'Java', 'Spring Boot']
         },
         {
-            role: 'OJT Aircraft Mechanic',
-            company: 'Aviation Integrity',
-            period: 'Jan 2023 - July 2023',
-            description: 'Completed aircraft maintenance tasks, including safety wiring, fastener security, sheet-metal work, and careful inspection procedures during 1,200 hours of OJT.',
-            technologies: ['Aircraft maintenance', 'Safety procedures', 'Inspection']
-        },
-        {
             role: 'Research Lead & Developer',
             company: 'Senior High School Project',
             period: '2019 - 2020',
